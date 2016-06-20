@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Advanced Java Script1</title>
+</head>
+<body>
+ <p> Create an IIFE which alerts "Hello World".</p> 
+<script type="text/javascript">
+
+(function () {
+    alert("Hello World!");
+})();
+</script>
+
+
+<br>
+<br>
+<p> Write an anonymous function which take email address as parameter and returns true/false
+after validating the input parameter.</p>
+<script type="text/javascript">
+ var x= prompt("Enter your E-mail Address");
+var result = (function(email_id){
+                            var regpat = /^[a-zA-Z_\.\-]+@[a-zA-Z_\-\.]+?\.[a-zA-Z]{2,4}$/;
+                            return regpat.test(x);
+                        })('x');
+document.write(result);
+ </script>
+        <br>
+        <br>
+<p>Write an IIFE in which we have to validate the input provided from a form. The form consists of
+name, email, phone, address in which name, email and phone number should not be left blank.
+Also validate that the given email is a valid email id using JavaScript</p>
+<br>
+
+<form action="#" method="post">
+	 	<table>
+	 		<tr> <td> Name : </td> <td> <input type="text" name="name" required> </input> </td> </tr><br>
+	 		<tr> <td> E-mail : </td> <td> <input type="email" name="name" required  onblur="(function(id){
+                                            var email_id = document.getElementById(id).value;
+                                            function validate(){
+                                                var regpat = /^[a-zA-Z_\.\-]+@[a-zA-Z_\-\.]+?\.[a-zA-Z]{2,4}$/;
+                                                return regpat.test(email_id);
+                                            }
+                                            alert(validate());
+                                        	})('email');" > </input> <br>
+
+	 		<tr> <td> Phone : </td> <td> <input type="tel" name="name" required> </input> </td> </tr> <br>
+	 		<tr> <td> Address : </td> <td> <textarea rows="4" columns="65" required> </textarea> </td> </tr> <br>
+	 		<tr> <td> <input type="Submit" name="Submit"> </input> </td> </tr>
+	 		</table>
+
+	 </form>	
+
+
+
+
+</body>
+</html>
