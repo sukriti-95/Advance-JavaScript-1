@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Java Script 5</title>
+</head>
+<body>
+<p> Closure Functions <br>
+a. Write a closure in which outer function with a parameter is used by inner function
+which also has a parameter. <br>
+b. The operation performed by inner function is to return multiplication of both
+the parameters value. <br>
+c. Call this closure function and alert the multiplication produced by the closure.</p>
+<script type="text/javascript">
+	function multiply(var1, var2)
+	{
+		var a= prompt("Enter first numnber");
+		var b= prompt("Enter second number");
+		function muli(var1,var2)
+		{
+			var z= a*b;
+			alert("Multiplication is " + z);
+			return z;
+
+
+		}
+	 muli(a,b);
+	}
+
+	var x=3;
+	var y=2;
+	multiply(x,y);
+</script>
+
+
+</body>
+</html>
